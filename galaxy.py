@@ -1,3 +1,6 @@
+import math
+
+
 class Galaxy:
     def __init__(self, Name=None, MegaLightYears=None, GalaxyType=None):
         self.Name = Name
@@ -22,7 +25,7 @@ class Galaxy:
         if self.MegaLightYears > other.MegaLightYears:
             return 1
         elif self.MegaLightYears < other.MegaLightYears:
-            return 1
+            return -1
         else:
             return 0
 
@@ -40,13 +43,13 @@ class GType:
 
     def __init__(self, type):
         self.MyGType = None
-        if type == 'S':
+        if type == "S":
             self.MyGType = GType.Type.Spiral
-        elif type == 'E':
+        elif type == "E":
             self.MyGType = GType.Type.Elliptical
-        elif type == 'I':
+        elif type == "I":
             self.MyGType = GType.Type.Irregular
-        elif type == 'L':
+        elif type == "L":
             self.MyGType = GType.Type.Lenticular
         else:
             pass
